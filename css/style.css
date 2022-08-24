@@ -4,7 +4,7 @@ Fonts
 =====================
 */
 @import url("https://fonts.googleapis.com/css?family=Catamaran:400,700|Grand+Hotel");
-
+@import url("http://fonts.cdnfonts.com/css/aquire");
 /*
 ===================== 
 variables
@@ -209,7 +209,7 @@ navbar
 =====================
 */
 .nav-btn {
-	position: fixed;
+	position: absolute;
 	z-index: 1;
 	color: var(--clr-primary);
 	font-size: 2rem;
@@ -267,7 +267,7 @@ navbar
 	transform: scale(1.07);
 	border: 1px solid var(--clr-primary);
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
 	.nav-btn {
 		display: none;
 	}
@@ -281,12 +281,14 @@ navbar
 	align-items: center;
 	justify-content: space-between;
 	padding: 0 1rem;
-	position: sticky;
 }
 .logo {
 	font-size: 1.5rem;
+	font-weight: bold;
 	color: var(--clr-white);
 	text-transform: uppercase;
+	font-family: "Aquire", var(--ff-primary);
+	letter-spacing: var(--spacing);
 }
 .b-nav-items {
 	display: flex;
@@ -295,13 +297,15 @@ navbar
 	justify-content: space-between;
 }
 .b-nav-link {
-	font-size: 1.5rem;
+	font-size: 1.125rem;
 	color: var(--clr-white);
 	text-transform: uppercase;
+	position: relative;
+	letter-spacing: var(--spacing);
 	transition: var(--transition);
 }
 .b-nav-link:hover {
-	transform: scale(1.07);
+	transform: scaleX(2);
 	color: var(--clr-primary);
 }
 .social-nav a i {
@@ -329,7 +333,7 @@ header
 */
 .header {
 	height: 100vh;
-	background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+	background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
 		url(/images/pexels-zesan-8524593.jpg) center/cover no-repeat fixed;
 	position: relative;
 	overflow: hidden;
@@ -388,11 +392,13 @@ About
 .about-info {
 	padding: 2rem 0;
 }
-
+.about-img {
+	overflow: hidden;
+}
 .about-img-container {
 	background: var(--clr-primary);
 	max-width: 30rem;
-	height: 26rem;
+	height: 24rem;
 	object-fit: cover;
 	overflow: hidden;
 }
@@ -589,6 +595,20 @@ Projects
 	opacity: 1;
 	transition: var(--transition);
 }
+.project-btn {
+	background: var(--clr-grey-1);
+	color: var(--clr-white);
+	border: 2px solid var(--clr-grey-1);
+	margin-bottom: 1rem;
+	border-radius: var(--radius);
+	transition: var(--transition);
+}
+.project-btn:hover {
+	background: var(--clr-primary);
+	color: var(--clr-grey-1);
+	font-size: 1rem;
+	opacity: 1;
+}
 .project-img img {
 	object-fit: cover;
 }
@@ -598,7 +618,10 @@ Projects
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	flex-direction: column;
 	background: var(--clr-primary);
+	opacity: 0.5;
+	transition: var(--transition);
 }
 .project-img {
 	z-index: 1;
@@ -608,7 +631,7 @@ Projects
 }
 .project-card:hover .project-img-container {
 	z-index: 2;
-	opacity: 0.7;
+	opacity: 0.9;
 }
 
 @media screen and (min-width: 768px) {
@@ -693,4 +716,20 @@ Footer
 .footer h4 span,
 a {
 	color: var(--clr-primary);
+}
+
+.back-to-top {
+	position: fixed;
+	color: var(--clr-primary);
+	font-size: 1.5rem;
+	background: var(--clr-white);
+	padding: 0.375rem 0.825rem;
+	right: 5%;
+	bottom: 5%;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	box-shadow: 2px 2px 13px rgba(0, 0, 0, 0.5);
+	cursor: pointer;
 }
