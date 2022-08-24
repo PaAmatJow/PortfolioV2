@@ -267,6 +267,7 @@ navbar
 	transform: scale(1.07);
 	border: 1px solid var(--clr-primary);
 }
+
 @media screen and (min-width: 769px) {
 	.nav-btn {
 		display: none;
@@ -321,7 +322,8 @@ navbar
 	letter-spacing: var(--spacing);
 	transition: var(--transition);
 }
-.b-nav-link:hover {
+.b-nav-link:hover,
+.b-nav-link:active {
 	color: var(--clr-primary);
 }
 .social-nav a i {
@@ -335,6 +337,12 @@ navbar
 }
 @media screen and (max-width: 768px) {
 	.big-nav {
+		display: none;
+	}
+	.nav-scroll {
+		display: none;
+	}
+	.nav {
 		display: none;
 	}
 }
@@ -381,7 +389,7 @@ h2 {
 .banner-btn {
 	padding: 0.7rem 0.875rem;
 	font-size: 1.2rem;
-	outline: 4px solid var(--clr-primary);
+	outline: 2px solid var(--clr-primary);
 	outline-offset: 0.25rem;
 	animation: scale 5s ease-in-out 1;
 }
