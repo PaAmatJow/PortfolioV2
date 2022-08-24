@@ -3,7 +3,7 @@
 Fonts
 =====================
 */
-@import url("https://fonts.googleapis.com/css?family=Catamaran:400,700|Grand+Hotel");
+@import url("https://fonts.googleapis.com/css?family=Catamaran:400,600,700|Grand+Hotel");
 @import url("http://fonts.cdnfonts.com/css/aquire");
 /*
 ===================== 
@@ -273,7 +273,22 @@ navbar
 	}
 }
 .nav {
-	padding: 0;
+	padding: 2rem auto;
+	position: fixed;
+	margin: 0 auto;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: 4;
+	transition: var(--transition);
+}
+@media screen and (min-width: 992px) {
+	.nav {
+		padding: 2rem 0;
+	}
+}
+
+.nav-scroll {
+	background: rgba(0, 0, 0, 0.8);
 }
 
 .big-nav {
@@ -281,10 +296,11 @@ navbar
 	align-items: center;
 	justify-content: space-between;
 	padding: 0 1rem;
+	z-index: 4;
 }
 .logo {
 	font-size: 1.5rem;
-	font-weight: bold;
+	font-weight: 400;
 	color: var(--clr-white);
 	text-transform: uppercase;
 	font-family: "Aquire", var(--ff-primary);
@@ -298,6 +314,7 @@ navbar
 }
 .b-nav-link {
 	font-size: 1.125rem;
+	font-weight: normal;
 	color: var(--clr-white);
 	text-transform: uppercase;
 	position: relative;
@@ -305,13 +322,13 @@ navbar
 	transition: var(--transition);
 }
 .b-nav-link:hover {
-	transform: scaleX(2);
 	color: var(--clr-primary);
 }
 .social-nav a i {
 	font-size: 1.5rem;
 	padding-top: 1.5rem;
 	color: var(--clr-white);
+	display: inline;
 }
 .social-nav a i:hover {
 	color: var(--clr-primary);
@@ -526,6 +543,10 @@ Services
 	max-width: 18rem;
 	margin: 0 auto;
 }
+.service-name h3 {
+	font-size: 1.5rem;
+}
+
 .service-text {
 	color: var(--clr-grey-5);
 	padding-bottom: 2rem;
