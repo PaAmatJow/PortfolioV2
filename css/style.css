@@ -274,7 +274,9 @@ navbar
 	}
 }
 .nav {
-	padding: 2rem auto;
+	padding: 2rem 4rem;
+	width: 100vw;
+	max-width: 100%;
 	position: fixed;
 	margin: 0 auto;
 	left: 50%;
