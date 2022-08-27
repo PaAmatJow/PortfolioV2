@@ -286,7 +286,7 @@ navbar
 }
 @media screen and (min-width: 992px) {
 	.nav {
-		padding: 2rem 0;
+		padding: 1rem 0;
 	}
 }
 
@@ -394,6 +394,12 @@ h2 {
 	outline: 2px solid var(--clr-primary);
 	outline-offset: 0.25rem;
 	animation: scale 5s ease-in-out 1;
+}
+@media screen and (max-width: 768px) {
+	.banner-btn {
+		padding: 0.375rem 0.475rem;
+		font-size: 1rem;
+	}
 }
 
 .content-divider {
